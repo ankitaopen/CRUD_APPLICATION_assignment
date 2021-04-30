@@ -11,3 +11,10 @@ public class CrudApplicationAssignmentApplication {
 	}
 
 }
+//postman
+//http://localhost:8085/api/employees
+//{
+//		"firstName" : "pqr---",
+//		"lastName" : "mno---",
+//		"emailId" : "pqr---mno@bankopen.co"
+//		}

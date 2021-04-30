@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +16,7 @@ public class Employee
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@Column(name = "id")
     private long id;
     @Column(name = "first_name")
     private String firstName;
@@ -21,6 +24,13 @@ public class Employee
     private String lastName;
     @Column(name = "email")
     private String emailId;
+    //adding new column
+    //changes to the DB
+   @Column(name = "salary")
+   private String salary;
+   @Column(name = "department")
+   private String department;
+
 
     public Employee() {
         super();

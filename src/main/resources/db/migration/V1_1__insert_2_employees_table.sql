@@ -1,0 +1,1 @@
+INSERT INTO employees(id,first_name,last_name,email) VALUES(1,'ankita','sahoo','ankita.sahoo@bankopen.co');

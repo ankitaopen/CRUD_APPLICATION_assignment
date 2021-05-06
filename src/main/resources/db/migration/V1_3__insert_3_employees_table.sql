@@ -1,1 +1,1 @@
-INSERT INTO employees(id,first_name,last_name,email) VALUES(3,'mno','pqr','mno.pqr@bankopen.co');
+INSERT INTO employees(first_name,last_name,email) VALUES('mno','pqr','mno.pqr@bankopen.co');

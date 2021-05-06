@@ -16,7 +16,8 @@ public class Employee
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@Column(name = "id")
+    //@Column(nullable = true)
+    @Column(name = "id")
     private long id;
     @Column(name = "first_name")
     private String firstName;
@@ -35,6 +36,11 @@ public class Employee
     public Employee() {
         super();
     }
+
+//    public Employee(long id)
+//    {
+//        this.id = id;
+//    }
 
     public Employee(String firstName, String lastName, String emailId) {
         super();

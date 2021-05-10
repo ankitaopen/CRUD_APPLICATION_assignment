@@ -1,83 +1,41 @@
-package com.example.demo.model;
+package com.example.demo.model
 
-import org.springframework.stereotype.Component;
-
-import javax.persistence.*;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*
 
 @Entity
 @Table(name = "employees")
-public class Employee
-{
+class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@Column(nullable = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //@Column(nullable = true)
     @Column(name = "id")
-    private long id;
+    var id: Long = 0
+
     @Column(name = "first_name")
-    private String firstName;
+    var firstName: String? = null
+
     @Column(name = "last_name")
-    private String lastName;
+    var lastName: String? = null
+
     @Column(name = "email")
-    private String emailId;
+    var emailId: String? = null
+
     //adding new column
     //changes to the DB
-   @Column(name = "salary")
-   private String salary;
-   @Column(name = "department")
-   private String department;
+    @Column(name = "salary")
+    private val salary: String? = null
 
+    @Column(name = "department")
+    private val department: String? = null
 
-    public Employee() {
-        super();
-    }
+    constructor() : super() {}
 
-//    public Employee(long id)
-//    {
-//        this.id = id;
-//    }
-
-    public Employee(String firstName, String lastName, String emailId) {
-        super();
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.emailId = emailId;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmailId() {
-        return emailId;
-    }
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    //    public Employee(long id)
+    //    {
+    //        this.id = id;
+    //    }
+    constructor(firstName: String?, lastName: String?, emailId: String?) : super() {
+        this.firstName = firstName
+        this.lastName = lastName
+        this.emailId = emailId
     }
 }

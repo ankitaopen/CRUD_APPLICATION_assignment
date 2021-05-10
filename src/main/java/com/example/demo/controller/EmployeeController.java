@@ -24,7 +24,7 @@ public class EmployeeController
     @GetMapping("employees")
     public List<Employee> getAllEmployee()
     {
-        return this.employeeRepository.findAll();
+        return (List<Employee>) this.employeeRepository.findAll();
     }
     //get employees by id
     @GetMapping("/employees/{id}")
